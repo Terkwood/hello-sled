@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 extern crate env_logger;
 extern crate log;
 extern crate sled;
