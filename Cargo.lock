@@ -122,7 +122,7 @@ dependencies = [
 
 [[package]]
 name = "hello-sled"
-version = "0.1.0"
+version = "0.1.0-a"
 dependencies = [
  "env_logger",
  "log",
