@@ -1,12 +1,7 @@
 // SPDX-License-Identifier: MIT
-extern crate env_logger;
-extern crate log;
 extern crate sled;
 
-use log::info;
-
 fn main() {
-    env_logger::init();
     hello().expect("Greetings!");
 }
 
@@ -20,13 +15,13 @@ fn hello() -> Result<(), sled::Error> {
     // insert and get, similar to std's BTreeMap
     tree.insert(k, v1).expect("inserted");
     let found = tree.get(&k).expect("found");
-    info!("We found a value! {:?}", found);
+    println!("We found a value! {:?}", found);
 
     // range queries
     for kv in tree.range(k.."KEY9") {
-        info!("Range query found: ");
+        println!("Range query found: ");
         if let Ok((rk, rv)) = kv {
-            info!("\t${:?} ${:?}", rk, rv);
+            println!("\t${:?} ${:?}", rk, rv);
         }
     }
 

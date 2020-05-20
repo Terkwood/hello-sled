@@ -1,10 +1,8 @@
 [package]
 name = "hello-sled"
-version = "0.1.0-a"
+version = "0.1.0-b"
 authors = ["terkwood <38859656+Terkwood@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
 sled = "0.31.0"
-env_logger = "0.7.1"
-log = "0.4.8"
